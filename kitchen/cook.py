@@ -1,6 +1,18 @@
 import sys
 import os
 import base64
+import subprocess
+branch = subprocess.Popen("git branch", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+branch = branch.decode()
+branch = branch.split('\n')
+ok = False
+for b in branch:
+    if '* kitchen' in b:
+        ok = True
+if not ok:
+    print('seems that you aren\'t on a right branch')
+    sys.exit(0)
+
 length = len(sys.argv)
 if length <= 2:
     print('what do u gonna do?')

@@ -1,12 +1,20 @@
-# Add background image and music
-
 import pygame
 from pygame.locals import *
 import time
 import random
 import imp
 import sys
-import traceback
+import subprocess
+branch = subprocess.Popen("git branch", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()[0]
+branch = branch.decode()
+branch = branch.split('\n')
+ok = False
+for b in branch:
+    if '* meat' in b:
+        ok = True
+if not ok:
+    print('seems that you aren\'t on a right branch')
+    sys.exit(0)
 
 SIZE = 40
 BACKGROUND_COLOR = (0, 0, 0)
@@ -254,14 +262,6 @@ class Game:
                         self.play()
 
                 except Exception as e:
-                    print(e)
-                    exception_type, exception_object, exception_traceback = sys.exc_info()
-                    line_number = exception_traceback.tb_lineno
-                    print(traceback.format_exc())
-                    print(exception_type)
-                    print(exception_object)
-                    print(exception_traceback)
-                    print(line_number)
                     self.show_game_over()
                     running = False
                     self.reset()
