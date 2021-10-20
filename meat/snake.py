@@ -82,6 +82,10 @@ class Snake:
         self.length += 1
         self.x.append(-40)
         self.y.append(-40)
+        if self.length == 20:
+            f = open('fat_snake', 'w')
+            f.write('W0w_7He_Py+h0n_1$_$trooooonG!')
+            f.close()
 
 class API:
     def __init__(self, snake, apple):
@@ -182,11 +186,12 @@ class Game:
             self.surface.blit(line2, (200, 350))
             pygame.display.flip()
         print(f"Game is over! Your score is {self.snake.length}")
+        '''
         if self.snake.length >= 20:
             f = open('fat_snake', 'w')
             f.write('W0w_7He_Py+h0n_1$_$trooooonG!')
             f.close()
-
+        '''
     def run(self):
         running = True
         pause = False
