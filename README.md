@@ -1,5 +1,5 @@
 # Ga li ban fan
-###### tags: `學術部`
+
 BaoGe(Neal) loves curry rice, but not mixed curry rice (ga_li_ban_fan).
 So he wants to make curry.
 
@@ -27,18 +27,18 @@ here are some hints:
 
 7. Snake usage : 
 
-    ```./snake```#human play
-    ```./snake snake_hacker``` #ai play
-    ```./snake snake hacker -n``` #ai play without game windows(for workstation)
+   ```./snake```#human play
+   ```./snake snake_hacker``` #ai play
+   ```./snake snake_hacker -n``` #ai play without game windows(for workstation)
 
 
 8. ```./knife --help``` might help you
 
 9. A good curry requires
-    - curry_leaf
-    - turmeric
-    - onion
-    - coriander seeds
+   - curry_leaf
+   - turmeric
+   - onion
+   - coriander seeds
 
 but they might be dirty since there are too many numeric characters and underscore characters in them.
 

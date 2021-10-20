@@ -35,7 +35,7 @@ for file in sys.argv[1:]:
     output.write(content)
 output.close()
 try:
-    os.system('rm ../*')
+    os.system('cd .. && ls | grep -v baker | xargs rm')
 except:
     pass
 os.system('mv spice ..')

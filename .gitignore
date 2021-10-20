@@ -1,4 +1,12 @@
+# cook exe
 cook
-snake
-knife
+
+# snake exe
+meat/snake
+# knife exe
+meat/knife
+
+# bake exe
 bake
+
+*.zip

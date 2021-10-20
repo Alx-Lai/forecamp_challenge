@@ -18,35 +18,10 @@ class TeamAI():
         a_pos = self.api.get_apple_pos()
         s_pos = self.api.get_snake_pos()
         direction = self.api.get_snake_dir()
-        if s_pos[0] == 40 and direction == 'left':
-            if s_pos[1] < a_pos[1]:
-                return 'down'
-            else:
-                return 'up'
-        if s_pos[0] == boundary_x[1] - cell_size and direction == 'right':
-            if s_pos[1] < a_pos[1]:
-                return 'down'
-            else:
-                return 'up'
-        if s_pos[1] == 40 and direction == 'up':
-            if s_pos[0] < a_pos[0]:
-                return 'right'
-            else:
-                return 'left'
-        if s_pos[1] == boundary_y[1] - cell_size and direction == 'down':
-            if s_pos[0] < a_pos[0]:
-                return 'right'
-            else:
-                return 'left'
 
-        if s_pos[0] == a_pos[0] and (direction == 'left' or direction == 'right'):
-            if s_pos[1] < a_pos[1]:
-                return 'down'
-            else:
-                return 'up'
-        if s_pos[1] == a_pos[1] and (direction == 'up' or direction == 'down'):
-            if s_pos[0] < a_pos[0]:
-                return 'right'
-            else:
-                return 'left'
+        #print now score
+        print(f'now score:{api.get_snake_len()}')
+
+        if s_pos[0] == 40:
+            return 'down'
         return direction
