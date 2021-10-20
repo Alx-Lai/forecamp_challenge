@@ -20,7 +20,7 @@ class TeamAI():
         direction = self.api.get_snake_dir()
 
         #print now score
-        print(f'now score:{api.get_snake_len()}')
+        print(f'now score:{self.api.get_snake_len()}')
 
         if s_pos[0] == 40:
             return 'down'
